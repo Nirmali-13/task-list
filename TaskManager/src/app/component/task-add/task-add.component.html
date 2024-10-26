@@ -1,0 +1,75 @@
+<!-- <div class="container shadow-lg">
+    <div class="d-flex justify-content-between mb-3">
+        <div>
+            <input type="text" name="search" placeholder="Search Task...">
+        </div>
+        <div>
+            <button type="button"><i class="bi bi-plus"></i>New Task</button>
+        </div>
+    </div>
+    <div class="card">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">DueTime</th>
+                <th scope="col">Priority</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">{{title}}</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td></td>
+              </tr>
+           
+            </tbody>
+          </table>
+    </div>
+</div> -->
+<div class="container shadow-lg">
+  <div class="d-flex justify-content-between mb-3">
+      <div>
+         <h3>Add new Task</h3>
+      </div>
+      <div>
+        <i class="bi bi-x"></i>
+      </div>
+  </div>
+  <div class="row align-items-center">
+    <div class="col-12 mx-auto">
+      <div>
+        <form [formGroup]="taskForm">
+           <div class="mb-3">
+            <label for="title" class="form-label" >Title</label>
+            <input type="text" class="form-control" formControlName="title">
+           </div>
+           <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" class="form-control" formControlName="description">
+           </div>
+           <div class="mb-3">
+            <label for="dueDate" class="form-label">Due Date</label>
+            <input type="date" class="form-control" formControlName="dueDate">
+           </div>
+           <div class="mb-3">
+            <label for="priority" class="form-label">Priority</label>
+            <select class="form-control" formControlName="priority">
+              <option value="High">High</option>
+              <option value="Medium">Medium</option>
+              <option value="Low">Low</option>
+            </select>
+           </div>
+           <div class="mb-3">
+            <button type="button" class="btn btn-primary me-3" (click)="onSubmit()">Submit</button>
+            <button type="button" class="btn btn-secondary me-3" (click)="onCancel()">Cancel</button>
+           </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+ </div> 
